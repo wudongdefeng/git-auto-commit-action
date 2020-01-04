@@ -45,5 +45,5 @@ _local_commit() {
 
 _push_to_github() {
     echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}"
-    git push --set-upstream origin "HEAD:$INPUT_BRANCH"
+    git push --set-upstream https://github.com/${GITHUB_REPOSITORY} "HEAD:$INPUT_BRANCH"
 }
