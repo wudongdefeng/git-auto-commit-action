@@ -6,11 +6,13 @@ _switch_to_repository() {
 }
 
 _git_is_dirty() {
+    echo "GIT IS DIRTY"
     [[ -n "$(git status -s)" ]]
 }
 
 # Set up .netrc file with GitHub credentials
 _setup_git ( ) {
+    echo "SETUP GIT"
   cat <<- EOF > $HOME/.netrc
         machine github.com
         login $GITHUB_ACTOR
